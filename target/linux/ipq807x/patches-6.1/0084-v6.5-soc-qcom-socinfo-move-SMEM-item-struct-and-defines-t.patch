@@ -1,4 +1,4 @@
-From 97505f4c049fa2e8c86a53411a9e599033898533 Mon Sep 17 00:00:00 2001
+From b7898f064f7d6b869183f3d67906dd7a0f446dbf Mon Sep 17 00:00:00 2001
 From: Robert Marko <robimarko@gmail.com>
 Date: Sat, 31 Dec 2022 00:27:42 +0100
 Subject: [PATCH] soc: qcom: socinfo: move SMEM item struct and defines to a
