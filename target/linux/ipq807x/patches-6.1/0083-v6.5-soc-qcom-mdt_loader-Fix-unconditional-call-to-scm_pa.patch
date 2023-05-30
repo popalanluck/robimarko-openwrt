@@ -1,6 +1,6 @@
-From b8295c6eb276b60f7b75c53a9703ca8fee01eba2 Mon Sep 17 00:00:00 2001
+From d122057d8c2e2c1e2bb877abe256613d02a1e8e2 Mon Sep 17 00:00:00 2001
 From: Christian Marangi <ansuelsmth@gmail.com>
-Date: Fri, 26 May 2023 13:09:17 +0200
+Date: Fri, 26 May 2023 13:55:11 +0200
 Subject: [PATCH] soc: qcom: mdt_loader: Fix unconditional call to
  scm_pas_mem_setup
 
@@ -26,12 +26,14 @@ qcom_mdt_pas_init() and correctly skip PAS mem_setup where relocate is
 not enabled.
 
 Fixes: ebeb20a9cd3f ("soc: qcom: mdt_loader: Always invoke PAS mem_setup")
-Reported-by: Robert Marko <robimarko@gmail.com>
 Tested-by: Robert Marko <robimarko@gmail.com>
 Co-developed-by: Robert Marko <robimarko@gmail.com>
 Signed-off-by: Robert Marko <robimarko@gmail.com>
 Signed-off-by: Christian Marangi <ansuelsmth@gmail.com>
 Cc: stable@vger.kernel.org
+Reviewed-by: Mukesh Ojha <quic_mojha@quicinc.com>
+Signed-off-by: Bjorn Andersson <andersson@kernel.org>
+Link: https://lore.kernel.org/r/20230526115511.3328-1-ansuelsmth@gmail.com
 ---
  drivers/soc/qcom/mdt_loader.c | 16 +++++++++++-----
  1 file changed, 11 insertions(+), 5 deletions(-)
